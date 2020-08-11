@@ -5,6 +5,9 @@
   font-family: Arial;
   font-style: normal;
 }
+
+/* Navigacija */
+
 nav {
   width: 100%;
   height: 80px;
@@ -35,10 +38,6 @@ a,
 a:visited,
 a:active {
   color: #fff;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 nav ul {
@@ -74,3 +73,47 @@ nav .icons .icon-1 {
 nav .icons .icon-2 {
   margin-top: 5px;
 }
+
+/* Dropdown */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown a:hover {
+  color: #85b2ff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  margin: 5px 16px;
+  padding: 5px 11px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid #fff;
+}
+
+.dropdown-content a:hover {
+  color: #85b2ff;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+/* Ostali dio stranice */

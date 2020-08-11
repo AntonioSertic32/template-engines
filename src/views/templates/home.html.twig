@@ -6,24 +6,23 @@
 
 {% block navigation %}
 	{% for item in data.navigation %}
-	<li><a href="#">{{ item.text }}</a></li>
-		{#
-		{% if value.items == null %}
+	
+		{% if item.items == null %}
 			<li><a href="#">{{ item.text }}</a></li>
-        {% elseif value.items != null %}
+        {% elseif item.items != null %}
         	<li class="dropdown"><a href="#">{{ item.text }}</a>
 				<div class="dropdown-content">
-					{% for item in value.items %}
-						<a href="#">{{ item.text }}</a>
+					{% for subitem in item.items %}
+						<a href="#">{{ subitem.text }}</a>
 					{% endfor %}
 				</div>  
         	</li>
         {% endif %}
-		#}
+		
 	{% endfor %}
 {% endblock %}
 
 {% block page_main %}
-	<h1>Bla bla</h1>
-	{{ data.title }}
+	<h1>{{ data.title }}</h1>
+	
 {% endblock %}
