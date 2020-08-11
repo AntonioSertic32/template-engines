@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Twig</title>
+    <title>
+        {% block page_title %}{% endblock %}
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/twigStyle.css" />
 </head>
 <body>
-	{% block navigation %}{% endblock %}
+
+    <header>
+        <nav>
+            <ul>
+                {% block navigation %}{% endblock %}
+                
+            </ul>
+            <div class="icons">
+                <svg class="icon-1">
+					<use href="/icons/icons.svg#icon-heart-outlined"></use>
+				</svg>
+				<svg class="icon-2">
+					<use href="/icons/icons.svg#icon-shopping-cart"></use>
+				</svg>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-title">
+		<h1>
+			{% block page_main %}{% endblock %}
+		</h1>
+	</div>
+
 </body>
