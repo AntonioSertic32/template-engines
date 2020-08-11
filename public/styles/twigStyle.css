@@ -117,3 +117,96 @@ nav .icons .icon-2 {
 }
 
 /* Ostali dio stranice */
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+.container h1 {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 25px;
+  margin: 60px 0;
+}
+
+/* Products */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.item {
+  border: 2px solid #e5e5e5;
+  background: #ffffff;
+  padding: 10px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.item img {
+  width: 100%;
+}
+
+.item__title {
+  margin: 10px 0;
+}
+
+.item__desc {
+  margin-bottom: 25px;
+}
+
+.item__bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px 0;
+  margin-top: auto;
+}
+
+.heart--empty {
+  height: 40px;
+  width: 40px;
+  background: rgba(133, 178, 255, 0.5);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.heart--full {
+  height: 40px;
+  width: 40px;
+  background: #85b2ff;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.heart--empty svg,
+.heart--full svg {
+  fill: white;
+  height: 25px;
+  width: 25px;
+}
+
+.item__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__old-price {
+  text-decoration: line-through;
+  font-size: 15px;
+}
+
+.item__new-price {
+  font-size: 18px;
+}
