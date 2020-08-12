@@ -22,52 +22,52 @@
 	{% endfor %}
 {% endblock %}
 
-{% block page_main %}
+{% block main_page_title %}
 	{{ data.title }}
 {% endblock %}
 
 {% block products %}
 	{% for item in data.products %}
-		<div class="item">
+		<div class="card">
 			<img src="{{item.image.thumbnail}}" alt="">
-			<div class="item__title">
+			<div class="card_title">
 				<h3>{{ item.name }}</h3>
 			</div>
-			<div class="item__desc">
+			<div class="card_desc">
 				<p>
 				{{ item.description }}
 				</p>
 			</div>
-			<div class="item__bottom">
+			<div class="card_bottom">
 
 			{% if item.favorite == true %}
-				<div class="heart--full">
-				<svg>
-					<use href="/img/icons.svg#icon-heart" style="color: aqua;"></use>
-				</svg>
+				<div class="favorite">
+					<svg>
+						<use href="/icons/icons.svg#icon-heart"></use>
+					</svg>
 				</div>
 			{% elseif item.favorite == false %}
-				<div class="heart--empty">
-				<svg>
-					<use href="/img/icons.svg#icon-heart-outlined" style="color: aqua;"></use>
-				</svg>
+				<div class="no_favorite">
+					<svg>
+						<use href="/icons/icons.svg#icon-heart-outlined"></use>
+					</svg>
 				</div>
 			{% endif %}
 
-				<div class="item__price">
+				<div class="card_price">
 
 				{% if item.specialPrice is not null %}
-					<div class="item__old-price">
-					<p>{{ item.regularPrice }}</p>
+					<div class="card_old-price">
+						<p>{{ item.regularPrice }}</p>
 					</div>
-					<div class="item__new-price">
-					<p>{{ item.specialPrice }}</p>
+					<div class="card_new-price">
+						<p>{{ item.specialPrice }}</p>
 					</div>
 				
 
 				{% elseif item.specialPrice is null %}
-					<div class="item__new-price">
-					<p>{{ item.regularPrice }}</p>
+					<div class="card_new-price">
+						<p>{{ item.regularPrice }}</p>
 					</div>
 				{% endif %}
 				</div>

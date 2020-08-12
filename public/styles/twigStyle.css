@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-/* Navigacija */
+/* Navbar */
 
 nav {
   width: 100%;
@@ -15,11 +15,9 @@ nav {
   background: #383b37;
   color: #fff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-weight: bold;
   font-size: 16px;
   line-height: 23px;
@@ -57,7 +55,6 @@ nav ul li:not(:last-child) {
 
 nav .icons {
   display: flex;
-  flex-direction: row;
 }
 
 nav .icons svg {
@@ -116,11 +113,12 @@ nav .icons .icon-2 {
   border-bottom: none;
 }
 
-/* Ostali dio stranice */
+/* Page title */
 
 .container {
   width: 70%;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 .container h1 {
   font-weight: bold;
@@ -137,38 +135,42 @@ nav .icons .icon-2 {
   grid-gap: 40px;
 }
 
-.item {
+.card {
   border: 2px solid #e5e5e5;
   background: #ffffff;
-  padding: 10px;
-
+  padding: 20px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
 }
 
-.item img {
+.card img {
   width: 100%;
 }
 
-.item__title {
+.card_title {
   margin: 10px 0;
+  font-size: 20px;
+  line-height: 25px;
+  color: #383b37;
 }
 
-.item__desc {
-  margin-bottom: 25px;
+.card_desc {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #383b37;
 }
 
-.item__bottom {
+.card_bottom {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 15px 0;
   margin-top: auto;
 }
 
-.heart--empty {
-  height: 40px;
-  width: 40px;
+.no_favorite {
+  height: 60px;
+  width: 60px;
   background: rgba(133, 178, 255, 0.5);
   border-radius: 100px;
   display: flex;
@@ -177,9 +179,9 @@ nav .icons .icon-2 {
   cursor: pointer;
 }
 
-.heart--full {
-  height: 40px;
-  width: 40px;
+.favorite {
+  height: 60px;
+  width: 60px;
   background: #85b2ff;
   border-radius: 100px;
   display: flex;
@@ -188,25 +190,32 @@ nav .icons .icon-2 {
   cursor: pointer;
 }
 
-.heart--empty svg,
-.heart--full svg {
+.favorite svg,
+.no_favorite svg {
   fill: white;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
 
-.item__price {
+.card_price {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
+  line-height: 31px;
+  color: #4e4c4d;
 }
 
-.item__old-price {
+.card_old-price {
   text-decoration: line-through;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 23px;
+  color: #4e4c4d;
 }
 
-.item__new-price {
-  font-size: 18px;
+.card_new-price {
+  font-size: 20px;
+  line-height: 31px;
+  color: #4e4c4d;
 }
